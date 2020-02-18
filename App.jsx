@@ -1,11 +1,9 @@
-import React from 'react';
+import React from "react";
+import {Route} from "react-router-dom";
+import MainPage from "./MainPage";
 
 const App = () => {
-    return (
-        <div>
-          여기출력  df
-        </div>
-    );
+  return <Route path="/" component={MainPage} exact />;
 };
 
 export default App;
