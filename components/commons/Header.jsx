@@ -1,20 +1,33 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import ScreenHelper from "./ScreenHelper";
 
-const HeaderWrapper = styled(ScreenHelper)`
-  width: 800px;
-  background: red;
-  border: 1px solid black;
-  font-size: 2rem;
+const HeaderBlock = styled.div`
+display:flex;
+
+
+
+  div{
+      margin-left:auto;
+      margin-right:10px;
+  }
 `;
 
-const Div = styled.div`
-    background: red;
+const HeaderWrapper = styled(ScreenHelper)`
+ 
+  border: 1px solid black;
 `;
 
 const Header = () => {
-  return <HeaderWrapper>dksldi역</HeaderWrapper>;
+  return (
+    <HeaderWrapper>
+
+        <HeaderBlock><div>akfxn</div></HeaderBlock>
+        <Link to="/">durl</Link>
+
+    </HeaderWrapper>
+  );
 };
 
 export default Header;

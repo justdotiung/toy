@@ -15,8 +15,10 @@ module.exports = {
       {
         test: /\.jsx/,
         loader: "babel-loader",
-        options: { presets: ["@babel/preset-react", "@babel/preset-env"],
-    plugins: ["react-hot-loader/babel"] }
+        options: {
+          presets: ["@babel/preset-react", "@babel/preset-env"],
+          plugins: ["react-hot-loader/babel"]
+        }
       }
     ]
   },
@@ -25,5 +27,5 @@ module.exports = {
     path: path.join(__dirname, "dist"),
     filename: "toybundle.js",
     publicPath: "/dist/"
-  }
+  },
 };
