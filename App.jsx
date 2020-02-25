@@ -5,6 +5,7 @@ import LoginPage from "./page/LoginPage";
 import SecondPage from "./page/SecondPage";
 import NotFoundPage from "./page/NotFoundPage";
 import DetailPage from "./page/DetailPgae";
+import WritePage from "./page/WritePage";
 
 const App = () => {
   return (

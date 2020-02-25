@@ -1,10 +1,10 @@
 import React from 'react';
+import Auth from "../components/auth/Auth"
+
 
 const LoginPage = () => {
     return (
-        <div>
-            로그인하기
-        </div>
+        <Auth />
     );
 };
 
