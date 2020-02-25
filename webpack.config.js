@@ -25,7 +25,7 @@ module.exports = {
 
   output: {
     path: path.join(__dirname, "dist"),
-    filename: "toybundle.js",
+    filename: "[name]_toybundle.js",
     publicPath: "/dist/"
   },
 };
