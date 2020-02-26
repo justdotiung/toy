@@ -9,10 +9,20 @@ const SideWrapper = styled.div`
   height: 300px;
   display: flex;
   flex-direction: column;
+  background:green;
+
+  @media (max-width: 1070px) {
+    width: 100px;    
+  }
 `;
 
 const LinkWrapper = styled(Link)`
+  padding: 1rem;
   font-size:1.25rem;
+  text-align: center;
+  :hover{
+    background: red;
+  }
 `;
 
 const Sidebar = () => {

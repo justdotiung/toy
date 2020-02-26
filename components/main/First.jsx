@@ -13,6 +13,10 @@ const WhiteSpace = styled.div`
   width: 240px;
   height: 10px;
   float:left;
+
+  @media (max-width: 1070px) {
+    width: 100px;    
+  }
 `;
 
 const Items = styled.div`

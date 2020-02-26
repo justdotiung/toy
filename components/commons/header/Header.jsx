@@ -7,14 +7,16 @@ import styled from "styled-components";
 const HeaderBlock = styled.div`
   width: 100%;
   background: rgba(255, 255, 255, 0.8);
-  display: flex;
   height: 56px;
+  top: 0;
   position: fixed;
   z-index: 1;
 `;
 
 const ButtonWrapper = styled.button`
-  width: 3.5rem;
+  width: 5rem;
+  display: flex;
+  justify-content: center;
   height: 2rem;
   border: none;
   outline: none;
@@ -26,6 +28,11 @@ const ButtonWrapper = styled.button`
   }
 `;
 
+const MarginBlock = styled.div`
+  padding: 1rem;
+  display: flex;
+`;
+
 const WhiteSpace = styled.div`
   height: 56px;
 `;
@@ -34,13 +41,15 @@ const Header = () => {
   return (
     <>
       <HeaderBlock>
-        <Logo />
-        <Form />
-        <ButtonWrapper>
-          <Link to="/login" style={{ marginRight: "10px" }}>
-            로그인
+        <MarginBlock>
+          <Link to="/">
+            <Logo />
           </Link>
-        </ButtonWrapper>
+          <Form />
+          <ButtonWrapper>
+            <Link to="/login">로그인</Link>
+          </ButtonWrapper>
+        </MarginBlock>
       </HeaderBlock>
       <WhiteSpace />
     </>
