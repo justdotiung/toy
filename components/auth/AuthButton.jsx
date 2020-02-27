@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled, { css } from "styled-components";
 
-const StyleButton = styled.button`
+const StyleButton = css`
   border: none;
   outline: none;
   width: 100%;
