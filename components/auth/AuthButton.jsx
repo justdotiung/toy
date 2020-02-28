@@ -3,25 +3,25 @@ import { Link } from "react-router-dom";
 import styled, { css } from "styled-components";
 
 const StyleButton = css`
-  border: none;
-  outline: none;
-  width: 100%;
-  height: 40px;
-  background: red;
-  :hover {
-    cursor: pointer;
-  }
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 40px;
+    background: red;
+    :hover {
+      cursor: pointer;
+    }
 `;
 
-const LinkBlock = css`
+const LinkBlock = styled(Link)`
   ${StyleButton}
 `;
-const ButtonBlock = css`
+const ButtonBlock = styled.button`
   ${StyleButton}
 `;
 
-const AuthButton = ({ to, ...rest }) => {
-  return <>{to ? <LinkBlock to {...rest} /> : <ButtonBlock {...rest} />}</>;
+const AuthButton = (props) => {
+  return <>{props.to ? <LinkBlock {...props}/> : <ButtonBlock {...props}/>}</>;
 };
 
 export default AuthButton;

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import AuthButton from './AuthButton';
+import AuthForm from './AuthForm';
 
 const AuthBlock = styled.div`
     width: 100%;
@@ -11,7 +11,7 @@ const AuthBlock = styled.div`
 
 `;
 
-const AuthForm = styled.div`
+const FormBlock = styled.div`
     width: 500px;
     height: 600px;
     border: 1px solid blue;
@@ -27,11 +27,10 @@ const AuthForm = styled.div`
 const Login = () => {
     return (
         <AuthBlock>
-            <AuthForm>
+            <FormBlock>
             <div className="logo">로고</div>
-            <AuthButton>로그인</AuthButton>        
-            <AuthButton to="/">취소</AuthButton>        
-            </AuthForm>
+            <AuthForm />
+            </FormBlock>
         </AuthBlock>
     );
 };
