@@ -18,13 +18,13 @@ const FormBlock = styled.div`
     border-radius: 10px;
 
     .logo{
-
+        height: 300px;
         border: 1px solid red;
     }
 
 `;
 
-const Login = () => {
+const Auth = () => {
     return (
         <AuthBlock>
             <FormBlock>
@@ -35,4 +35,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default Auth;
