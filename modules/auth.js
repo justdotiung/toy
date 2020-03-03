@@ -9,7 +9,7 @@ const defaultState = {
   },
   register: {
     name: "",
-    passowrd: "",
+    password: "",
     chackPassword: ""
   }
 };
@@ -24,6 +24,7 @@ const auth = handleActions(
     [CREATE_AUTH]: (state, { payload: { form, key, value } }) => ({
       ...state,
       [form]: {
+          ...state[form],
         [key]: value
       }
     })

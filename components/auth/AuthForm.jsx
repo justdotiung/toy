@@ -1,7 +1,5 @@
-import React, { useCallback } from "react";
-import { Link } from "react-router-dom";
+import React from "react";
 import styled from "styled-components";
-import { useHistory } from "react-router-dom";
 import AuthButton from "./AuthButton";
 
 const StyledForm = styled.form`
@@ -20,23 +18,37 @@ const StyledForm = styled.form`
   }
 `;
 
-const AuthForm = ({ form }) => {
-  const history = useHistory();
-  const onSubmit = useCallback(e => {
-    e.preventDefault();
-    history.push("/");
-  });
+const AuthForm = ({ form, onChange, user }) => {
+
+  const { name, password, chackPassword} = user;
+
   return (
     <>
-      <StyledForm onSubmit={onSubmit}>
-        <input type="text" name="username" placeholder="아이디" />
-        <input type="password" name="password" placeholder="비밀번호" />
+      <StyledForm>
         {form && (
-          <input
-            type="password"
-            name="ChackPassword"
-            placeholder="비밀번호확인"
-          />
+          <>
+            <input
+              type="text"
+              name="name"
+              placeholder="아이디"
+              onChange={onChange}
+              value={user.name}
+            />
+            <input
+              type="password"
+              name="password"
+              placeholder="비밀번호"
+              onChange={onChange}
+              value={user.password}
+            />
+
+            <input
+              type="password"
+              name="ChackPassword"
+              placeholder="비밀번호확인"
+              onChange={onChange}
+            />
+          </>
         )}
         <AuthButton width="true">로그인</AuthButton>
         <div>
